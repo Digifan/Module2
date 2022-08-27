@@ -4,7 +4,6 @@ package UniqueName;
 import lombok.NonNull;
 
 import java.util.*;
-import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class Uname {
@@ -15,7 +14,6 @@ public class Uname {
                 collect(Collectors.joining(" ")).split(" ");
 
         return  uname[0];
-//                strings.stream().filter(items::add)
-//                .collect(Collectors.toSet()).stream().findFirst().get();
+
     }
 }

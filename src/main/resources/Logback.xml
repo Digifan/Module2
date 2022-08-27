@@ -1,0 +1,30 @@
+<configuration>
+    <property name = "MAIN_LOG" value = "logs/launcher.log" />
+
+    <!-- <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+         encoders are assigned the type
+             ch.qos.logback.classic.encoder.PatternLayoutEncoder by default
+        <encoder>
+            <pattern>%d{HH:mm:ss:SSS} %-5level %logger{36} - %msg %n</pattern>
+        </encoder>
+    </appender> -->
+    <appender name="FILELOG" class="ch.qos.logback.core.FileAppender">
+        <file> ${MAIN_LOG} </file>
+        <!-- encoders are assigned the type
+             ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+        <encoder>
+            <pattern>%d{HH:mm:ss:SSS} %-5level %logger{36} - %msg %n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name = "Graph" level = "debug" additivity = "false" >
+        <!-- <appender-ref ref="CONSOLE" /> -->
+         <appender-ref ref="FILELOG" />
+     </logger>
+
+     <root level="DEBUG">
+         <appender-ref ref="FILELOG" />
+     </root>
+
+
+ </configuration>
