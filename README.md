@@ -1,2 +1,2 @@
 # Module2
-A-level
+This is Java test tasks
